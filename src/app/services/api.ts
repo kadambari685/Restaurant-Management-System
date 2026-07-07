@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://restaurant-backend-osnm.onrender.com";
 
 export async function getMenu() {
     const response = await fetch(`${API_URL}/menu`);
@@ -11,7 +11,7 @@ export async function getMenu() {
 }
 
 export async function createReservation(data: any) {
-    const response = await fetch("http://127.0.0.1:8000/reservation", {
+    const response = await fetch(`${API_URL}/reservation`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
